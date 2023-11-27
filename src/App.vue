@@ -3,6 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 
 const name = "Brian Rompis"
+const address = "Jl. Raya Seminyak"
 </script>
 
 <template>
@@ -11,6 +12,7 @@ const name = "Brian Rompis"
 
     <div class="wrapper">
       <input v-model="name">
+      <input v-model="address">
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">Demo</RouterLink>
