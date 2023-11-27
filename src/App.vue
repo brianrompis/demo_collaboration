@@ -1,9 +1,11 @@
 <script setup>
+import {ref} from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 
 const name = "Brian Rompis"
 const address = "Jl. Raya Seminyak"
+const count = ref(0)
 </script>
 
 <template>
@@ -13,6 +15,8 @@ const address = "Jl. Raya Seminyak"
     <div class="wrapper">
       <input v-model="name">
       <input v-model="address">
+      <button @click="count++">Add 1</button>
+      <p>Count is: {{ count }}</p>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">Demo</RouterLink>
